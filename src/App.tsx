@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import {ArrowUpRight,ArrowDown,ArrowUp,MapPin} from 'lucide-react';
 import Motion from './components/Motion';
 const instagram='https://www.instagram.com/vistamalvadex/';
@@ -6,8 +5,8 @@ const gallery='https://lightroom.adobe.com/shares/09e9e57a785f499a8cee09548f49d7
 const whatsapp='https://wa.me/5527992921782?text='+encodeURIComponent('Olá! Vim pelo site da Malvadex e gostaria de saber mais sobre as peças.');
 const maps='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('Rua São Luiz, 292, IBES, Vila Velha, ES');
 const external={target:'_blank',rel:'noopener noreferrer'};
-function Action({href,children,secondary=false}:{href:string,children:ReactNode,secondary?:boolean}){return <a className={'button '+(secondary?'secondary':'primary')} href={href} {...external}>{children}<ArrowUpRight size={20}/></a>}
-function Label({number,children}:{number:string,children:ReactNode}){return <div className="section-label"><span>{number} /</span><span>{children}</span></div>}
+function Action({href,children,secondary=false}:{href:string,children:React.ReactNode,secondary?:boolean}){return <a className={'button '+(secondary?'secondary':'primary')} href={href} {...external}>{children}<ArrowUpRight size={20}/></a>}
+function Label({number,children}:{number:string,children:React.ReactNode}){return <div className="section-label"><span>{number} /</span><span>{children}</span></div>}
 const business={'@context':'https://schema.org','@type':'ClothingStore',name:'Malvadex',alternateName:'MVDX',description:'Loja física de roupas e acessórios streetwear no IBES, em Vila Velha.',url:'https://vista-malvadex.vercel.app',telephone:'+55 27 99292-1782',address:{'@type':'PostalAddress',streetAddress:'Rua São Luiz, 292 — IBES',addressLocality:'Vila Velha',addressRegion:'ES',addressCountry:'BR'},sameAs:[instagram]};
 export default function App(){return <>
 <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>

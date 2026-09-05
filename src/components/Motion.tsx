@@ -1,5 +1,7 @@
+'use client';
 import {useEffect,useState} from 'react';
 import {Pause,Play,ArrowUpRight} from 'lucide-react';
+import {Button} from './ui/button';
 const whatsapp='https://wa.me/5527992921782?text='+encodeURIComponent('Olá! Vim pelo site da Malvadex e gostaria de saber mais sobre as peças.');
 export default function Motion(){
 const [paused,setPaused]=useState(false);
@@ -17,5 +19,5 @@ onReduce();reduce.addEventListener('change',onReduce);
 return ()=>{reveals.disconnect();heroObserver.disconnect();reduce.removeEventListener('change',onReduce);delete root.dataset.enhanced;delete root.dataset.heroOut;};
 },[]);
 useEffect(()=>{document.documentElement.dataset.motionPaused=String(paused)},[paused]);
-return <><button type="button" className="motion-control" onClick={()=>setPaused(!paused)} aria-label={paused?'Retomar movimento decorativo':'Pausar movimento decorativo'} aria-pressed={paused}>{paused?<Play size={16}/>:<Pause size={16}/>}</button><a className="floating-contact" href={whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Falar com a Malvadex no WhatsApp"><span>WhatsApp</span><ArrowUpRight size={20}/></a></>;
+return <><Button className="motion-control" variant="ghost" size="icon" onClick={()=>setPaused(!paused)} aria-label={paused?'Retomar movimento decorativo':'Pausar movimento decorativo'} aria-pressed={paused}>{paused?<Play size={16}/>:<Pause size={16}/>}</Button><a className="floating-contact" href={whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Falar com a Malvadex no WhatsApp"><span>WhatsApp</span><ArrowUpRight size={20}/></a></>;
 }
