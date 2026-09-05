@@ -1,5 +1,5 @@
 {
-  "name": "malvadex-landing-page",
+  "name": "sites-project",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -51,7 +51,5 @@
     "vite": "8.0.13",
     "wrangler": "4.92.0"
   },
-  "type": "module",
-  "description": "Landing page institucional da Malvadex (MVDX), streetwear em Vila Velha - ES.",
-  "license": "UNLICENSED"
+  "type": "module"
 }

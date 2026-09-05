@@ -1,6 +1,6 @@
-# Dependencies
-node_modules/
-.pnp
+# dependencies
+/node_modules
+/.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -8,38 +8,32 @@ node_modules/
 !.yarn/releases
 !.yarn/versions
 
-# Build / framework output
-.next/
-.vinext/
-out/
-dist/
-.vercel/
-.wrangler/
-outputs/
-work/
-*.tsbuildinfo
-next-env.d.ts
+# testing
+/coverage
 
-# Tests / coverage
-coverage/
+# next.js
+/.next/
+/.vinext/
+/out/
 
-# Environment and secrets
-.env
-.env.*
-!.env.example
+# misc
+.DS_Store
 *.pem
 
-# OpenAI Sites / local hosting metadata
-.openai/
-
-# Editor / OS
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# Logs
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+
+# local environment
+.env*
+
+# deployment and generated files
+.vercel
+next-env.d.ts
+/dist/
+/.wrangler/
+/outputs/
+/work/
+*.tsbuildinfo
