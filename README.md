@@ -25,3 +25,7 @@ A saída é gerada em `dist/`.
 - Install Command: `npm install`
 
 Em um projeto Vite padrão, a Vercel normalmente detecta esses valores automaticamente.
+
+## Compatibilidade de build
+
+O alias `@/` está configurado no TypeScript e no Vite, permitindo imports como `@/lib/utils` no deploy da Vercel. O projeto fixa Node.js 22.x para evitar upgrades automáticos de major.
