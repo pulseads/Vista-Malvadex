@@ -1,4 +1,6 @@
-import tailwindcss from '@tailwindcss/postcss';
-import vinext from 'vinext';
 import { defineConfig } from 'vite';
-export default defineConfig({css:{postcss:{plugins:[tailwindcss()]}},plugins:[vinext()]});
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+});
